@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Home</title>
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav{
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd6d5;
+    
+    position: fixed;
+    width: 73%;
+    margin-left: 2rem;
+    
+    height: 50px;
+    
+}
+.logo{
+    font-size: 3rem;
+    font-family: 'Tangerine', serif;
+    color: #000000;
+    text-shadow: 4px 4px 4px #aaa;
+}
+/* home,about us, categories and services */
+.top{
+    display: flex;
+    justify-content: end;
+    /* justify-content: space-between; */
+    align-items: right;
+    flex: 1;
+    font-size: 20px;
+    
+}
+a{
+    margin: 1rem;
+    text-decoration: none;
+    color:#473434;
+    font-size: 16px;
+} 
+
+a:hover{
+    background-color: #4e54c8;
+}
+/* efvtawebfjearferagfeargergergesarg */
+
+  .maincontainer h1{
+    color:#fff;
+    text-align: center;
+  }
+  form label {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    color: #fff;
+  }
+  
+  form input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin:auto;
+    border-radius: 20px;
+    border:2px solid #8f94fb;
+    box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  form button {
+    background-color: #fff;
+    color: #8f94fb;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  form button:hover{
+    border:2px solid #8f94fb;
+  }
+  
+  #short-url-container {
+    margin-top: 20px;
+  }
+  #short-url-container p{
+    text-align: center;
+    color: #fff;
+  }
+  
+  #short-url {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #short-url a {
+    word-wrap: break-word;
+    margin-right: 10px;
+    color: #fff;
+  }
+
+  .maincontainer
+  {
+    width:80%;
+    height: auto;
+    min-height:350px;
+    padding:40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.25);
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+    margin: auto;
+  }
+
+  
+  
+/*........................ Footer starting */
+.footer{
+    margin-top: 10rem;
+    height: 60px;
+    background-color: #DDD6D5;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h3{
+
+    font-size: 12px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+    </style>
+   <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+    
+
+    
+  
+
+    <div class="maincontainer" >
+        <!-- beginning of navigation bar -->
+    <div class="nav" style="margin-right: 0;">
+        <div class="logo" >
+            <p>LINKA</p>
+        </div>
+
+        <div class="top">
+            <a href="Home.html">Home</a>
+
+            <a href="linklist.html">Saved</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="Login.html">LogOut</a>
+
+        </div>
+
+        
+    </div> 
+     <!-- end of navigation bar -->
+     <table  style="margin-top: 5rem;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Short URL</th>
+            <th>Details</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row1">
+            <td>1</td>
+            <td>Example Name</td>
+            <td>example.com</td>
+            <td>Lorem ipsum dolor sit amet</td>
+            <td>
+              <button onclick="updateRow('row1')">Update</button>
+              <button onclick="deleteRow('row1')">Delete</button>
+            </td>
+          </tr>
+          <!-- Add more rows here as needed -->
+        </tbody>
+      </table>
+        
+<div class="footer">
+
+    <h3>@ Something Something Copyright Stuff</h3>
+
+</div>
+
+<!-- ending of footer -->
+        
+<script>
+    function updateRow(rowId) {
+      // Retrieve the row elements
+      var row = document.getElementById(rowId);
+      var cells = row.getElementsByTagName('td');
+      
+      // Access the values of each cell
+      var id = cells[0].innerText;
+      var name = cells[1].innerText;
+      var description = cells[3].innerText;
+      
+      // Create a form for updating the row
+      var formHTML = `
+        <form onsubmit="performUpdate(event, '${rowId}')">
+          <label for="name">Name:</label>
+          <input type="text" id="name" value="${name}">
+          
+          <label for="description">Description:</label>
+          <textarea id="description">${description}</textarea>
+          
+          <button type="submit">Update</button>
+        </form>
+      `;
+      
+      // Replace the row cells with the form
+      row.innerHTML = `<td>${id}</td><td colspan="3">${formHTML}</td>`;
+    }
+    
+    function performUpdate(event, rowId) {
+      event.preventDefault();
+      
+      // Retrieve the form elements
+      var form = event.target;
+      var nameInput = form.querySelector('#name');
+      var descriptionInput = form.querySelector('#description');
+      
+      // Retrieve the updated values
+      var updatedName = nameInput.value;
+      var updatedDescription = descriptionInput.value;
+      
+      // Perform the update logic
+      
+      // Example: Log the ID and updated values
+      var row = document.getElementById(rowId);
+      var id = row.cells[0].innerText;
+      console.log("Updating row - ID:", id, "Name:", updatedName, "Description:", updatedDescription);
+      
+      // Replace the form with the updated row
+      var updatedRowHTML = `
+        <td>${id}</td>
+        <td>${updatedName}</td>
+        <td>${row.cells[2].innerText}</td>
+        <td>${updatedDescription}</td>
+        <td>
+          <button onclick="updateRow('${rowId}')">Update</button>
+          <button onclick="deleteRow('${rowId}')">Delete</button>
+        </td>
+      `;
+      row.innerHTML = updatedRowHTML;
+    }
+    
+    function deleteRow(rowId) {
+      // Retrieve the row element
+      var row = document.getElementById(rowId);
+      
+      // Access the values of the row and perform the delete logic
+      
+      // Example: Log the ID and Name of the row being deleted
+      var id = row.cells[0].innerText;
+      var name = row.cells[1].innerText;
+      console.log("Deleting row - ID:", id, "Name:", name);
+      
+      // Perform your delete logic here
+      
+      // Replace the above console.log with your actual delete code
+      
+      // Remove the row from the table
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+
+</html>

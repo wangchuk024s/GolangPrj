@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/Registration.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="main">
+
+                <div id="form">
+
+                    <h1>Registration</h1> <br>
+
+                    <div class="input-control">
+                        <input id="username" name="username" type="text" placeholder="UserName">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <input id="email" name="email" type="text" placeholder="Email">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <input id="password"name="password" type="password" placeholder="Password">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <input id="password2"name="password2" type="password" placeholder="Confirm Password"> 
+                        <div class="error"></div>
+                    </div>
+
+                    <button type="submit" onclick="signUp()">Sign Up</button>
+
+                </div>
+
+                <p>Already have an account? <a href="Login.html"> Sign In Here </a></p>
+                
+            </div>
+    
+            <div class="pic">
+                <img src="./images/main.jpg" alt="">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="./js/validation.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+</html>

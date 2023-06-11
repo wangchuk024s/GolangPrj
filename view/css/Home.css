@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #F4EEEE;
+}
+/* ...................................navigation bar */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDD6D5;
+    position: fixed;
+    width: 100%;
+    margin-top: -100px;
+    height: 50px;
+    border-bottom: 1px solid #EAEAEA;
+}
+/* logo image */
+#logo{     
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.logo{
+    flex: 1;
+    margin-left: 20px;
+}
+/* home,about us, categories and services */
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color:#473434;
+    font-size: 16px;
+}
+
+/* add and profile */
+.buttons{
+    display: flex;
+    justify-content: right;
+    flex: 1;
+    align-items: center;
+    margin-right: 10px;
+}
+#profile{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #473434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#add{
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+#add a{
+    font-size: 12px;
+}
+
+/* end of navigation bar ------------------------------------*/
+
+/*........................ Footer starting */
+.footer{
+    height: 60px;
+    background-color: #DDD6D5;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h3{
+
+    font-size: 12px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+
+
+
+
